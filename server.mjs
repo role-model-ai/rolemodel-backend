@@ -4,7 +4,10 @@ import OpenAI from "openai";
 
 const app = express();
 app.use(cors({
-  origin: "https://dynamic-shortbread-0d370c.netlify.app",
+  origin: [
+    "https://dynamic-shortbread-0d370c.netlify.app",
+    "https://findmearolemodel.com"
+  ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
