@@ -3,7 +3,11 @@ import cors from "cors";
 import OpenAI from "openai";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://dynamic-shortbread-0d370c.netlify.app",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
+}));
 app.use(express.json());
 
 // Requires Node 18+ for global fetch
